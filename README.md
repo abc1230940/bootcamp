@@ -1,3 +1,3 @@
-# bootcamp
+# Bootcamp
 
 ## sub-heading
