@@ -273,7 +273,7 @@ public class DemoArray {
         // 0 9 1 9 2 0 9 9
         // is there any number appear 3 times or more?
         // true
-        int [] nums2 = new int [] {0, 2, 1, 3, 2, 0 ,9, 9};
+        int [] nums2 = new int [] {0, 9, 1, 9, 2, 0 ,9, 9};
         int [] count2 = new int [10];
             for (int i = 0; i < nums2.length; i++) {
                 count2 [nums2[i] - 0]++;
