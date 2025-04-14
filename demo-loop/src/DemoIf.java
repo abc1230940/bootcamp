@@ -32,6 +32,65 @@ public class DemoIf {
     } else if (s.equals("Hello")) {
       System.out.println("This is Hello");
     }
+
+    boolean isFemale = true;
+    boolean isSmoker = true;
+    int age = 45;
+    double premium = 120.0;
+    double increment = 0.0;
+
+    // base premium = 120
+
+    // Female 40, premium 8% more
+    // Male 16 or above, premium 3% more
+    // Smoker -> 7% more
+    // age 70 or above -> 20% more 
+
+    // 1. Female 40 NS -> 8
+    // 2. Female 40 S -> 8 + 7
+    // 3. Male 16 NS -> 3
+    // 4. Male 16 S -> 3 + 7
+    // ...
+
+    
+    if (isFemale) {
+      if (isSmoker) {
+        increment += 0.07;
+          if (age >= 40) { 
+            increment += 0.08;
+            if (age >= 70) {
+              increment += 0.2;
+            }
+              
+            }
+          }
+      } else {
+          if (isSmoker) {
+            increment += 0.07;
+            if (age >= 16) { 
+              increment += 0.03;
+              if (age >= 70) {
+                increment += 0.2;
+      }
+    }
+  }
+}
+      
+      
+      premium = premium * (1 + increment);
+      System.out.println(premium);
   }
   
+
+  
 }
+
+        
+
+
+
+    
+
+  
+  
+

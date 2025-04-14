@@ -105,6 +105,40 @@ public class DemoForLoop {
             System.out.println(i); // 0,1
         }
 
+        // Question: Sum up 5 - 15 -> result
+        // product of 16 - 20 -> result2
+        // Single for loop
+        int result1 = 0;
+        int result2 = 1;
+        for (int i = 0; i < 21; i++) {
+            if (i > 0 && i < 16) {
+                result1 += i;
+                continue; // 有continue會更加快
+            }
+            if (i >= 16) {
+                result2 *= i; 
+            }
+        }
+        System.out.println(result1);
+        System.out.println(result2);
+
+        for ( int i = 10; i>= 0; i--) {
+            System.out.println(i);
+        }
+
+        // ! Nested Loop -> VERY DIFFICULT -> LOOP中LOOP
+        // i=0, j=0,1
+        // i=1, j=0,1
+        // i=2, j=0,1
+        //所以會print到6次hello
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.println("i = " + i + ", j = " + j);
+            }
+        }
+
+        
+
     }
 
 
