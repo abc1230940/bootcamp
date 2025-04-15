@@ -276,12 +276,13 @@ public class DemoArray {
         int [] nums2 = new int [] {0, 9, 1, 9, 2, 0 ,9, 9};
         int [] count2 = new int [10];
             for (int i = 0; i < nums2.length; i++) {
-                count2 [nums2[i] - 0]++;
+                count2 [nums2[i]]++;
             }
         boolean isThreeTimesOrMore = false;
         for (int i = 0; i < count2.length; i++) {
             if (count2[i] >= 3) {
                 isThreeTimesOrMore = true;
+                break;
             }
         }
         System.out.println(isThreeTimesOrMore);
