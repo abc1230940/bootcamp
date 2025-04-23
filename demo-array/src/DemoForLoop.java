@@ -70,7 +70,7 @@ public class DemoForLoop {
 
     System.out.println(Arrays.toString((bigDecimals))); // [2, 3.0, 4.5]
 
-    float[] fArr = new float[bigDecimals.length]; // 可以直接寫佢個長度
+    float[] fArr = new float[bigDecimals.length]; // 可以直接寫佢個長度, 因為係抄寫
     for (int i = 0; i < bigDecimals.length; i++) {
       fArr[i] = bigDecimals[i].floatValue(); 
     }
