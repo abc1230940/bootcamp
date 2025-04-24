@@ -70,6 +70,7 @@ public static void main(String[] args) {
   System.out.println(c2.getColor()); // RED
   System.out.println(c2.getColor2()); // R
 
+
   }
 
 }
