@@ -32,6 +32,11 @@ public class Person {
   public double getBmi() { // presentation, 不要寫BigDecimal(盒) -> BigDecimal只會用在計算上
     return BigDecimal.valueOf(this.weight).divide(BigDecimal.valueOf(this.height * this.height), 1, RoundingMode.HALF_UP).doubleValue();
   }
+
+  public static double getBmi2(double height, double weight) { 
+    return BigDecimal.valueOf(weight).divide(BigDecimal.valueOf(height * height), 1, RoundingMode.HALF_UP).doubleValue();
+  }
+
   public String getWeightStatus() {
     double bmi = this.getBmi(); // ! this.getBMI係將attribute放落object時才有的東西, 用完佢會消失, 但不要用在if，因為會不停call個method, 會慢
     if (bmi > 0 && bmi < 18.5) { 
@@ -42,6 +47,18 @@ public class Person {
       return "Weight Status is Overweight";
     }
       return "Weight Status is Obese"; // base condition, 不會寫else
+    }
+
+    public static String getWeightStatus2(double height, double weight) { // ! 這個method可以慳資源
+      double bmi = getBmi2(height, weight);
+      if (bmi > 0 && bmi < 18.5) { 
+        return "Weight Status is Underweight"; // "return" -> exit method
+      } else if (bmi >= 18.5 && bmi < 25) {  
+        return "Weight Status is Normal";
+      } else if (bmi >= 25 && bmi < 29.9) {
+        return "Weight Status is Overweight";
+      }
+        return "Weight Status is Obese";
     }
 
   public static void main(String[] args) {
@@ -55,5 +72,8 @@ public class Person {
 
     System.out.println(p1.getBmi());
     System.out.println(p1.getWeightStatus());
+
+    System.out.println(Person.getBmi2(1.75, 65.5));
+    System.out.println(Person.getWeightStatus2(1.75, 76));
   }
 }

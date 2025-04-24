@@ -32,16 +32,16 @@ public class Item { // one item特徵
   }
 
   public static void main(String[] args) {
-    Item i1 = new Item();
-    i1.setPrice(20.5);
-    i1.setQuantity(5);
-    Item i2 = new Item();
-    i2.setPrice(100.5);
-    i2.setQuantity(3);
-    Item i3 = new Item();
-    i3.setPrice(55.5);
-    i3.setQuantity(10);
+    Item i1 = new Item(10.5, 2);
+    //i1.setPrice(20.5);
+    //i1.setQuantity(5);
+    Item i2 = new Item(100.5, 60);
+    //i2.setPrice(100.5);
+    //i2.setQuantity(3);
+    Item i3 = new Item(5000.55, 10);
+    //i3.setPrice(55.5);
+    //i3.setQuantity(10);
 
-    System.out.println(i1.checkoutAmount());
+    System.out.println(i3.amount());
   }
 }

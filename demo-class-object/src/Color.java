@@ -7,7 +7,6 @@ public class Color {
   public void setColor(String value) {
     this.value = value;
   }
-  }
   
   public static void main(String[] args) {
     Color c1 = new Color();

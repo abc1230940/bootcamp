@@ -48,7 +48,7 @@ public class Customer { // blueprint 藍圖
   public boolean isVIP() {
     double total = 0;
     for (int i = 0; i < this.orders.length; i++) { // for loop裡有for loop, 極端case: order裡可以冇item
-      total = BigDecimal.valueOf(this.orders[i].amount()).add(BigDecimal.valueOf(this.orders[i].amount())).doubleValue();
+      total = BigDecimal.valueOf(total).add(BigDecimal.valueOf(this.orders[i].amount())).doubleValue();
     }
     if (total >= 10000) {
       return true;

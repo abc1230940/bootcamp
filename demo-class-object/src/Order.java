@@ -48,11 +48,13 @@ public class Order {
   public static void main(String[] args) {
     Order order1 = new Order(); // call constructor -> is an array // counter = 1
     Item apple = new Item(6.5, 3);
+    Item water = new Item(8.5, 15);
     order1.add(apple);
+    order1.add(water);
     System.out.println(order1.amount());
     
     Order order2 = new Order();
-    Item lemon = new Item(5.5, 10)
+    Item lemon = new Item(5.5, 10);
     order2.add(lemon);
     System.out.println(order2.getId()); // 2
     
