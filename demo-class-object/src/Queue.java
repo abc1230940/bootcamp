@@ -5,15 +5,22 @@ public class Queue {
     return this.persons;
   }
 
-  public Person getPerson(int index) {
+  // constructors
+  public Queue() { // 先製作一個0長array
+    this.persons = new Person[0];
+  }
+
+  // getters
+  public Person getPerson(int index) { // 從array中搵返邊個人，所以要return array
     return this.persons[index];
   }
 
-  public Person getHead() {
+  public Person getHead() { // 從array中搵返第一個人係邊個，所以要return array
     return this.persons[0];
   }
 
-  public void setPerson(Person[] persons) {
+  // setters
+  public void setPerson(Person[] persons) { // update persons array object -> 在main整aaray object & person object
     this.persons = persons;
   }
   
@@ -36,10 +43,11 @@ public class Queue {
     persons[1] = p2;
     persons[2] = p3;
     q1.setPerson(persons);
+    System.out.println(q1.getPerson(0));
 
-    System.out.println(q1.getHead().getBmi());
+    System.out.println(q1.getHead().getBmi()); // 找出
 
-    for (int i = 0; i < q1.getPersons[i].length; i++) {
+    for (int i = 0; i < q1.persons.length; i++) { // 找出q1裡面所有人的weight status
       System.out.println(q1.getPerson(i).getWeightStatus());
     }
 

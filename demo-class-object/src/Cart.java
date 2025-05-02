@@ -44,7 +44,7 @@ public class Cart {
     arr[0] = 10;
     arr[1] = 100;
     arr[2] = -2;
-    System.out.println(Arrays.toString(arr));
+    System.out.println(Arrays.toString(arr)); // [10, 100, -2]
     int[] arr2 = arr; // backup the address of arr object, 有支針再指住arr指住的object
     arr = new int[4];
     System.out.println(Arrays.toString(arr)); // [0,0,0,0] 

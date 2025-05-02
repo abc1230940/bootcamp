@@ -31,7 +31,7 @@ public class Classroom {
     System.out.println(c1.getNames()[0]); // John -> get array name c1上面有個工具叫getNames
 
     // Update the second student name -> Steven
-
+    
     // for loop, print all student names in the classroom
     for (int i = 0; i < c1.getNames().length; i++) {
       System.out.println(c1.getNames()[i]);

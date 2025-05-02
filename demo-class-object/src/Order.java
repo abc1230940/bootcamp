@@ -23,6 +23,13 @@ public class Order {
     // this.items = new Item[0];
     // this.id = id;
   // }
+  public void setItems(Item[] items) {
+    this.items = items;
+  }
+
+  public Item getItem(int index) {
+    return this.items[index];
+  }
 
   // Methods
   public void add(Item item) { // ! 要知道
@@ -52,6 +59,7 @@ public class Order {
     order1.add(apple);
     order1.add(water);
     System.out.println(order1.amount());
+    System.out.println(order1.getItem(0));
     
     Order order2 = new Order();
     Item lemon = new Item(5.5, 10);

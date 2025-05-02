@@ -14,6 +14,7 @@ public class SuperString {
     }
   }
 
+  // ! 找出返char aaray中index係邊一個英文字
   public char charAt(int index) {
     return this.chs[index];
   }

@@ -61,6 +61,15 @@ public class Person {
         return "Weight Status is Obese";
     }
 
+    public boolean equals(Person person) { // 一個person的定義, 要寫俾人聽
+      return this.height == person.getHeight()
+            && this.weight == person.getWeight();
+    }
+
+    public String toString() { // 呈現object方法 -> String
+      return ("Person(" + "height=" + this.height + ",weight=" + this.weight + ")");
+    }
+
   public static void main(String[] args) {
     Person p1 = new Person(1.75, 65);
     p1.setHeight(1.75);
@@ -75,5 +84,12 @@ public class Person {
 
     System.out.println(Person.getBmi2(1.75, 65.5));
     System.out.println(Person.getWeightStatus2(1.75, 76));
+
+    System.out.println(p1); // ! p1係一個地址，佢自己會自動call.toString，所以可以唔加都得，最緊要寫好個.toString method
+    
+    // You preparedthe equals() method. p2 is able to call equals()
+    Person p3 = new Person(1.76, 76);
+    System.out.println(p2.equals(p3)); // true
+    System.out.println(p1.equals(p2)); // false
   }
 }

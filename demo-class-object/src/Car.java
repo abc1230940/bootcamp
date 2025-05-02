@@ -5,6 +5,7 @@ public class Car {
   private String color;
   private String brand;
   private double price;
+  private char[] chs;
 
   public Car(String color, String brand, double price) {
     this.color = color;

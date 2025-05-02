@@ -18,7 +18,12 @@ public class abc {
 
     short s1 = 2;
     byte b1 = 4;
-    b1 = s1;
+    
+    String s2 = "hello";
+    System.out.println(s2.charAt(0));
   }
   
+
+  
 }
+
