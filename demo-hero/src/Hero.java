@@ -14,44 +14,50 @@ public abstract class Hero {
     return this.level;
   }
 
+  public int getHp() {
+    return this.hp;
+  }
+
+  public int getMp() {
+    return this.mp;
+  }
+
   public void levelUp() {
-    this.level += 1;
-    this.hp = 
-  }  
-
-  public abstract void levelUpValues();
-
+    this.level++;
+    if (this.level == 2) {
+        if (this instanceof Warrior) {
+            this.hp = Warrior.levels[1][0];
+            this.mp = Warrior.levels[1][1]; 
+        } else if (this instanceof Mage) {
+            this.hp = Mage.levels[1][0];
+            this.mp = Mage.levels[1][1];
+        } else if (this instanceof Archer) {
+            this.hp = Archer.levels[1][0];
+            this.mp = Archer.levels[1][1];
+        }
+    } else if (this.level == 3) {
+        if (this instanceof Warrior) {
+            this.hp = Warrior.levels[2][0]; 
+            this.mp = Warrior.levels[2][1]; 
+        } else if (this instanceof Mage) {
+            this.hp = Mage.levels[2][0];
+            this.mp = Mage.levels[2][1];
+        } else if (this instanceof Archer) {
+            this.hp = Archer.levels[2][0];
+            this.mp = Archer.levels[2][1];
+        }
+    }
+      }
   }
 
+      
+      
 
+    
+     
+    
+    
 
+  
+  
 
-
-
-  public void setHp(int hp) {
-    this.hp = hp;
-  }
-  public void setMp(int mp) {
-    this.mp = mp;
-  }
-  public void setPa(int pa) {
-    this.pa = pa;
-  }
-  public void setPd(int pd) {
-    this.pd = pd;
-  }
-  public void setMa(int ma) {
-    this.ma = ma;
-  }
-  public void setMd(int md) {
-    this.md = md;
-  }
-  public void setAg(int ag) {
-    this.ag = ag;
-  }
-  public void setCc(int cc) {
-    this.cc = cc;
-  }
-  public void setCd(int cd) {
-    this.cd = cd;
-  }

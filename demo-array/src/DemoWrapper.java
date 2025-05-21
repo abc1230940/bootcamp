@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DemoWrapper {
   public static void main(String[] args) {
     // 8 primitives
@@ -106,6 +108,11 @@ public class DemoWrapper {
     }
     System.out.println(isPalindromic);
 
+
+
+    String s = "hello world. I am Clarence.";
+    String[] arr = s.split(" ");
+    System.out.println(Arrays.toString(arr));
 
   }
   

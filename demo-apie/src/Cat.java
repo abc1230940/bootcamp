@@ -31,6 +31,7 @@ public class Cat extends Animal{
     return super.getName().equals(cat.getName()) && this.age == cat.getAge();
   }
 
+  @Override
   public String toString() {
     return ("Cat(" + "name=" + super.getName() + ",age=" + this.age + ")");
   }

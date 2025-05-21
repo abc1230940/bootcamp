@@ -3,7 +3,7 @@ import java.util.Objects;
 public class Book {
   private long id;
   private String name;
-  private Library library; // ! book -> Library object address
+  // private Library library; // ! book -> Library object address
 
 public Book(String name, long id) {
   this.name = name;

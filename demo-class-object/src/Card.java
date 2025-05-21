@@ -60,6 +60,18 @@ public class Card {
     return false;
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof Card)) {
+      return false;
+    }
+    Card card = (Card) obj;
+    return this.rank == card.getRank() && this.suit == card.getSuit();
+  }
+
   // this (self)
   // ! equals return boolean 係約定俗成
   public boolean equals(Card card) {

@@ -1,11 +1,16 @@
 public class SavingAccount extends SubAccount {
+  private Currency currency; // 可以唔駛用String
   
-  public SavingAccount() {
+  private SavingAccount(Currency currency) {
+    this.currency = currency;
+  }
 
+  public static SavingAccount OfHKD() {
+    return new SavingAccount(Currency.HKD);
   }
 
   public static void main(String[] args) { // ! SavingAccount所有methods都從SubAccount繼承, 所以可以用得返晒所有methods
-    SavingAccount sa = new SavingAccount();
+    SavingAccount sa = new SavingAccount(Currency.USD); // 開美金saving account
     System.out.println(sa.getBalance());
     sa.credit(150);
     sa.debit(100); // true
@@ -29,6 +34,8 @@ public class SavingAccount extends SubAccount {
     pa.getCurrentAccount().debit(80);
     pa.getSavingAccount().debit(230);
     System.out.println(pa.balance());
+
+
 
   }
 }

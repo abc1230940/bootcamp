@@ -12,7 +12,7 @@ public class Bookshelf {
     return this.books;
   }
 
-  public boolean isFull() {
+  public boolean isFull() { // check最大數目用constant
     return this.books.length >= MAX_SIZE;
     
   }
@@ -41,28 +41,15 @@ public class Bookshelf {
     }
     return false;
   }
-
-  public boolean borrow(Book book) {
-    for (int i = 0; i < this.books.length; i++) {
-      if (this.books[i] == null) {
-        System.out.println("The book is borrowed");
-        return false;
-      }
-    book = this.books[i];
-    this.books[i] = null;
-    break;
     
-    }
-    System.out.println(book.toString());
-    return true;
-  }
+  
 
   public static void main(String[] args) {
     Bookshelf bookshelf = new Bookshelf();
-    bookshelf.add(new Book(100));
-    bookshelf.add(new Book(101));
+    bookshelf.add(new Book("ABC", 1));
+    bookshelf.add(new Book("DEF", 2));
     System.out.println(bookshelf.isFull());
-    bookshelf.add(new Book(102));
+    bookshelf.add(new Book("GHI", 3));
     System.out.println(bookshelf.isFull());
 
   }

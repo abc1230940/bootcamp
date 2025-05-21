@@ -7,7 +7,7 @@ public class Library {
   private Bookshelf bookshelf;
 
   public Library() {
-    bookshelf = new Bookshelf();
+    this.bookshelf = new Bookshelf();
   }
 
 

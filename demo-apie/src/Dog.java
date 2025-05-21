@@ -4,9 +4,17 @@ public class Dog extends Animal {
     super(name);
   }
 
-  public boolean equals(Dog dog) {
+  @Override // ! Override祖先object的方法
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (!(obj instanceof Dog))
+      return false;
+    Dog dog = (Dog) obj;
     return super.getName().equals(dog.getName());
   }
+
   public String toString() {
     return ("Dog(" + "name=" + super.getName() + ")");
   }

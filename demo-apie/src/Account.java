@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 public abstract class Account {
   // private double balance;
+  private double balance;
   private SubAccount[] subAccounts; // saving, stock, foriegn exchange
 
   // super()
@@ -16,9 +17,9 @@ public abstract class Account {
     this.subAccounts[1] = new CurrentAccount();
   }
 
-  // public double getBalance() {
-    // return this.balance;
-  // }
+   public double getBalance() {
+     return this.balance;
+   }
 
   public SubAccount getSavingAccount() {
     return this.subAccounts[0];
